@@ -1,6 +1,6 @@
 # Multi-Type-Road-Surface-Dataset-MTRSD
 
-This repository provides a **Multi-Type-Road-Surface-Dataset** for road surface recognition tasks, including six road surfaces with ambient illuminance data and encompassing unstructured and heterogeneous road surfaces. The dataset is designed to support supervised classification of different road surface types under varying illumination conditions.
+This repository provides a **Multi-Type-Road-Surface-Dataset** for road surface recognition tasks, including six road surfaces with ambient illuminance data and encompassing structured and unstructured road surfaces. The dataset is designed to support supervised classification of different road surface types under varying illumination conditions.
 
 After the paper is accepted, the dataset will be uploaded fully.
 
@@ -17,14 +17,14 @@ The dataset supports illumination-aware preprocessing and grayscale–RGB fusion
 
 ### Supported Road Surface Categories
 
-| Class Tag | Class ID | Description                 |
-| --------- | -------- | --------------------------- |
-| BY        | 0        | Asphalt Pavement (AP)       |
-| SN        | 1        | Cement Pavement (CP)        |
-| TL        | 2        | Earth Surface (ES)          |
-| CD        | 3        | Grass Surface (GS)          |
-| CS        | 4        | Grass Gravel Surface (GGS)  |
-| CT        | 5        | Grass Earth Surface  (GES)  |
+| Class Tag | Class ID | Description             |
+| --------- | -------- | ----------------------- |
+| AP        | 0        | Asphalt Pavement        |
+| CP        | 1        | Cement Pavement         |
+| ES        | 2        | Earth Surface           |
+| GS        | 3        | Grass Surface           |
+| GGS       | 4        | Grass Gravel Surface    |
+| GES       | 5        | Grass Earth Surface     |
 
 ---
 
@@ -34,22 +34,33 @@ The dataset directory is organized as follows:
 
 ```
 root_path/
-├── train/
-│   ├── image_001_xxx_illumination.jpg
-│   ├── image_002_xxx_illumination.jpg
-│   └── ...
-├── test/
-│   ├── image_101_xxx_illumination.jpg
-│   └── ...
+├── AP/
+│   ├── AP_1/
+│   │    ├── AP_0001_illumination.jpg
+│   │    ├── AP_0002_illumination.jpg
+│   │    ├── AP_0003_illumination.jpg
+│   │    └── ...
+│   ├── AP_2/
+│   ├── ...
+│   └── AP_10/
+├── CP/
+│   ├── CP_1/
+│   │    ├── CP_0001_illumination.jpg
+│   │    ├── CP_0002_illumination.jpg
+│   │    ├── CP_0003_illumination.jpg
+│   │    └── ...
+│   ├── CP_2/
+│   ├── ...
+│   └── CP_10/
+├── ...
+├── GGS/
+└── GES/
 ```
-
-* `train/`: training images
-* `test/`: testing images
 
 Image filenames must follow the format:
 
 ```
-<ClassTag>_<SequenceNumber>_<VibrationValue>_<IlluminanceValue>.jpg
+<ClassTag>_<SequenceNumber>_<IlluminanceValue>.jpg
 ```
 
 The **first character** defines the class label, and the **last numeric field** represents the illumination value.
