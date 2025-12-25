@@ -2,8 +2,6 @@
 
 This repository provides a **Multi-Type-Road-Surface-Dataset** for road surface recognition tasks, including six road surfaces with ambient illuminance data and encompassing structured and unstructured road surfaces. The dataset is designed to support supervised classification of different road surface types under varying illumination conditions.
 
-After the paper is accepted, the dataset will be uploaded fully.
-
 ---
 
 ## 1. Dataset Overview
@@ -35,21 +33,21 @@ The dataset directory is organized as follows:
 ```
 root_path/
 ├── AP/
-│   ├── AP_1/
+│   ├── AP_01/
 │   │    ├── AP_0001_illumination.jpg
 │   │    ├── AP_0002_illumination.jpg
 │   │    ├── AP_0003_illumination.jpg
 │   │    └── ...
-│   ├── AP_2/
+│   ├── AP_02/
 │   ├── ...
 │   └── AP_10/
 ├── CP/
-│   ├── CP_1/
+│   ├── CP_01/
 │   │    ├── CP_0001_illumination.jpg
 │   │    ├── CP_0002_illumination.jpg
 │   │    ├── CP_0003_illumination.jpg
 │   │    └── ...
-│   ├── CP_2/
+│   ├── CP_02/
 │   ├── ...
 │   └── CP_10/
 ├── ...
@@ -71,4 +69,4 @@ The **first character** defines the class label, and the **last numeric field** 
 
 This dataset and code are released for **academic and research use only** with license **CC BY 4.0**.
 
-If you use this dataset or code in your research, please cite the corresponding paper or project.
+If you use this dataset in your research, please cite the corresponding paper or project.
